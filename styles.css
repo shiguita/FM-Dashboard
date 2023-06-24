@@ -165,6 +165,10 @@ span > img:hover {
   background-position: right 10% bottom 110%;
 }
 
+.selected {
+  color: white;
+}
+
 #usrName {
   font-weight: 300;
   margin-top: 5px;

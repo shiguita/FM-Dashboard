@@ -1,38 +1,42 @@
 const subtitles = document.querySelectorAll(".previous");
 const times = document.querySelectorAll(".time");
+const listItems = document.querySelectorAll("li");
+
 fetch("./data.json")
   .then((res) => res.json())
   .then((json) => {
-    let previousTime = 0;
-    let currentTime = 0;
-    document.getElementById("Day").addEventListener("click", () => {
+    const changeValues = (id) => {
+      let timefr = "";
+      switch (id) {
+        case "Day":
+          timefr = "daily";
+          break;
+
+        case "Week":
+          timefr = "weekly";
+          break;
+
+        case "Month":
+          timefr = "monthly";
+          break;
+
+        default:
+          break;
+      }
       times.forEach((element, ind) => {
-        currentTime = json[ind].timeframes.daily.current;
-        element.textContent = `${currentTime}hrs`;
+        element.textContent = `${json[ind].timeframes[timefr].current}hrs`;
       });
       subtitles.forEach((element, ind) => {
-        previousTime = json[ind].timeframes.daily.previous;
-        element.textContent = `Last Day - ${previousTime}hrs`;
+        element.textContent = `Last Day - ${json[ind].timeframes[timefr].previous}hrs`;
       });
-    });
-    document.getElementById("Week").addEventListener("click", () => {
-      times.forEach((element, ind) => {
-        currentTime = json[ind].timeframes.weekly.current;
-        element.textContent = `${currentTime}hrs`;
-      });
-      subtitles.forEach((element, ind) => {
-        previousTime = json[ind].timeframes.weekly.previous;
-        element.textContent = `Last Week - ${previousTime}hrs`;
-      });
-    });
-    document.getElementById("Month").addEventListener("click", () => {
-      times.forEach((element, ind) => {
-        currentTime = json[ind].timeframes.monthly.current;
-        element.textContent = `${currentTime}hrs`;
-      });
-      subtitles.forEach((element, ind) => {
-        previousTime = json[ind].timeframes.monthly.previous;
-        element.textContent = `Last Month - ${previousTime}hrs`;
+    };
+
+    listItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        listItems.forEach((item) => (item.className = ""));
+        item.className = "selected";
+
+        changeValues(item.id);
       });
     });
   })
