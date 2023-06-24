@@ -1,0 +1,171 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Work-red: hsl(15, 100%, 70%);
+  --Soft-blue: hsl(195, 74%, 62%);
+  --Study-red: hsl(348, 100%, 68%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft-orange: hsl(43, 84%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  grid-template-rows: repeat(2, 220px);
+  gap: 25px;
+}
+
+ul {
+  color: hsl(236, 100%, 87%);
+  font-weight: 300;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-top: 15px;
+  list-style-type: none;
+  line-height: 30px;
+}
+
+li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+img {
+  float: top;
+  border: 2px solid white;
+  border-radius: 50px;
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+span {
+  justify-self: flex-end;
+}
+
+span > img {
+  padding: 3px;
+  float: unset;
+  border: 0;
+  height: auto;
+}
+
+span > img:hover {
+  cursor: pointer;
+  filter: sepia(100%) grayscale(100%) brightness(100%);
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 25px;
+  background-color: hsl(235, 46%, 20%);
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1fr 1fr;
+  transition: background-color 0.2s;
+}
+
+.content:hover {
+  background-color: hsl(236, 38%, 33%);
+}
+
+.time {
+  grid-column: span 2;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.subtitle {
+  color: hsl(236, 100%, 87%);
+  font-weight: 300;
+  font-size: 14px;
+  grid-column: span 2;
+  align-self: flex-end;
+}
+
+.user {
+  grid-row: span 2;
+  background-color: hsl(235, 46%, 20%);
+}
+
+.usrInfo {
+  height: 60%;
+  padding: 30px;
+  background-color: var(--Blue);
+  border-radius: 20px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.work {
+  background-color: var(--Work-red);
+  background-image: url(images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 105%;
+}
+
+.play {
+  background-color: var(--Soft-blue);
+  background-image: url(images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 105%;
+}
+
+.study {
+  background-color: var(--Study-red);
+  background-image: url(images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 105%;
+}
+
+.excersice {
+  background-color: var(--Lime-green);
+  background-image: url(images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 100%;
+}
+
+.social {
+  background-color: var(--Violet);
+  background-image: url(images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 115%;
+}
+
+.self-care {
+  background-color: var(--Soft-orange);
+  background-image: url(images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 110%;
+}
+
+#usrName {
+  font-weight: 300;
+  margin-top: 5px;
+}
