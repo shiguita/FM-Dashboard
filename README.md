@@ -37,7 +37,7 @@ Users should be able to:
 
 For this challenge I learned about reading data from a JSON file using the `fetch()` method of promises. I want to do this first challenges using plain HTML, CSS & JS to get a good understanding of the basics and then move on to other libraries/frameworks.
 
-I'm sure that there's a way to make the design responsive but I couldn't get to it so I used media quieries to get the job done.
+I'm sure that there's a way to make the design responsive but I couldn't get to it so I used media quieries to get the job done. It's kind of a big mess but that's how CSS is supposed to be right? 🙃
 
 ```js
 let timefr = "";
@@ -66,4 +66,4 @@ This part of the code was needed to prevent code repetition but I'm sure that th
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/shiguita)
+- Frontend Mentor - [@shiguita](https://www.frontendmentor.io/profile/shiguita)
