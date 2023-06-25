@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Pages](https://your-solution-url.com)
-- Live Site URL: [Frontend Mentor](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://shiguita.github.io/FM-Dashboard/)
 
 ## My process
 
